@@ -1,0 +1,9 @@
+#!/bin/bash
+files=(GCF_000195995.1_ASM19599v1_genomic.fna
+       GCF_000007785.1_ASM778v1_genomic.fna
+       GCF_000471025.2_ASM47102v2_genomic.fna
+      )
+for f in ${files[*]}
+do
+    ./mem-catch $f ala2.txt
+done

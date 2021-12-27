@@ -1,0 +1,45 @@
+#!/bin/bash
+
+if [ -z "$1" ] || [ -z "$2" ]
+then
+    echo "$0 <text file> <pattern file>"
+    exit
+fi
+
+
+textFile=$1
+patternFile=$2
+
+declare -a implementations=(
+    "-p h -n 0 -e 0"
+    "-p s -n 0 -e 0"
+    "-p n -n 0 -e 0"
+    "-p p -n 1 -e 0"
+    "-p p -n 2 -e 0"
+    "-p p -n 3 -e 0"
+    "-p p -n 4 -e 0"
+    "-p m -n 0 -e 0"
+    "-p m -n 0 -e 1"
+    "-p m -n 0 -e 2"
+    # "-p m -n 0 -e 3"
+    # "-p m -n 0 -e 4"
+    # "-p m -n 0 -e 5"
+)
+
+
+
+RootDir=data
+mkdir -p $RootDir
+
+while read line_content; do
+    for p in "${implementations[@]}"
+    do
+	output=$(valgrind ./tp4 -i $textFile  $p  -t $line_content -s 2>&1 >/dev/null | grep -P 'total heap usage' | awk '{print $9}' | sed 's/,//g')
+	numOfCharsFile=$(wc -c $textFile | awk '{print $1}')
+	numOfCharsPattern=${#line_content}
+	execArgs=$(echo "$p" | awk '{print $4" "$6}')
+	Implementation=$(echo "$p" | awk '{print $2}')
+	memory=$output
+	echo "$Implementation $numOfCharsFile $numOfCharsPattern" $memory "$execArgs">> "$RootDir/""mem.txt"
+    done
+done < $patternFile

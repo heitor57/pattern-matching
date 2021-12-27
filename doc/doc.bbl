@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{bitarrayclibrary}
+Bit array.
+\newblock \url{https://michaeldipperstein.github.io/bitarray.html}.
+\newblock Accessed: 2019-06-12.
+
+\bibitem{genomelist}
+Genome information.
+\newblock \url{https://www.ncbi.nlm.nih.gov/genome/browse/#!/overview/}.
+\newblock Accessed: 2019-06-24.
+
+\bibitem{osthreeeasypieces}
+Remzi~H. Arpaci-Dusseau and Andrea~C. Arpaci-Dusseau.
+\newblock {\em Operating Systems: Three Easy Pieces}.
+\newblock Arpaci-Dusseau Books, 2018.
+
+\bibitem{cormen09_introd}
+Thomas Cormen.
+\newblock {\em Introduction to algorithms}.
+\newblock MIT Press, Cambridge, Mass, 2009.
+
+\bibitem{galil79_improv_worst_case_runnin_time}
+Zvi Galil.
+\newblock On improving the worst case running time of the boyer-moore string
+  matching algorithm.
+\newblock {\em Communications of the ACM}, 22(9):505--508, 1979.
+
+\end{thebibliography}

@@ -1,0 +1,5 @@
+#!/bin/bash
+for f in *.fna
+do
+    ./data-catch $f p.txt
+done
