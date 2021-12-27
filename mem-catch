@@ -34,7 +34,7 @@ mkdir -p $RootDir
 while read line_content; do
     for p in "${implementations[@]}"
     do
-	output=$(valgrind ./tp4 -i $textFile  $p  -t $line_content -s 2>&1 >/dev/null | grep -P 'total heap usage' | awk '{print $9}' | sed 's/,//g')
+	output=$(valgrind ./pattern-matching -i $textFile  $p  -t $line_content -s 2>&1 >/dev/null | grep -P 'total heap usage' | awk '{print $9}' | sed 's/,//g')
 	numOfCharsFile=$(wc -c $textFile | awk '{print $1}')
 	numOfCharsPattern=${#line_content}
 	execArgs=$(echo "$p" | awk '{print $4" "$6}')

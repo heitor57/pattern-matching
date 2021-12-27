@@ -5,7 +5,7 @@ COFLAGS	= -Wall -c -g
 OBJDIR = obj
 OBJS = $(addprefix $(OBJDIR)/, main.o io.o time.o stringmatching.o bitvector.o)
 LDFLAGS = -lm -lpthread
-MAIN_TARGET = tp4
+MAIN_TARGET = pattern-matching
 vpath %.c  src
 vpath %.h  src
 .PHONY: directories

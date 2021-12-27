@@ -8,15 +8,15 @@ size_t ERROR = 0,NUM_THREADS = 0;
 bool NUM_MATCHES=false;
 char IMPLEMENTATION = ' ';
 void printUsage(){
-  printf("tp4 -i <entry file> -o <out file> -d(d) (DEBUG) -p <Implementations> -t <Pattern> -e <error [0..Integer]> -f <Pattern file> -n <number of threads> -s(match format to number of matches)\n"
+  printf("pattern-matching -i <entry file> -o <out file> -d(d) (DEBUG) -p <Implementations> -t <Pattern> -e <error [0..Integer]> -f <Pattern file> -n <number of threads> -s(match format to number of matches)\n"
     "Possible implementations\n"
     "-p h(BMH) s(Serial BMHS) n(Exact Shift-And)\n"
     "-p m(Approximated Shift-And) p(Parallel BMHS) a(All)\n"
     "-n <number of threads> if (n<=0 or n>numProcessors) then n gets numProcessors\n"
-    "Examples: tp4 -i in.txt -o out.txt -d -p h -t br\n"
-    "tp4 -i in.txt -dd -o out.txt -t \"hello world\"\n"
-    "tp4 -i in.txt -d -p a -t hello\n"
-    "tp4 -i in.txt -d -p n -f patterns.txt\n");
+    "Examples: pattern-matching -i in.txt -o out.txt -d -p h -t br\n"
+    "pattern-matching -i in.txt -dd -o out.txt -t \"hello world\"\n"
+    "pattern-matching -i in.txt -d -p a -t hello\n"
+    "pattern-matching -i in.txt -d -p n -f patterns.txt\n");
   exit(ENOENT);
 }
 

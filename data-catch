@@ -36,7 +36,7 @@ mkdir -p $RootDir
 while read line_content; do
     for p in "${implementations[@]}"
     do
-	output=$(./tp4 -i $textFile  $p  -t $line_content -s -d)
+	output=$(./pattern-matching -i $textFile  $p  -t $line_content -s -d)
 	numOfCharsFile=$(wc -c $textFile | awk '{print $1}')
 	numOfCharsPattern=${#line_content}
 	execArgs=$(echo "$p" | awk '{print $4" "$6}')

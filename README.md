@@ -11,15 +11,15 @@
 
 ## Utilização do programa
 
-	tp4 -i <entry file> -o <out file> -d(d) (DEBUG) -p <Implementations> -t <Pattern> -e <error [0..Integer]> -f <Pattern file> -n <number of threads> -s(match format to number of matches)
+	pattern-matching -i <entry file> -o <out file> -d(d) (DEBUG) -p <Implementations> -t <Pattern> -e <error [0..Integer]> -f <Pattern file> -n <number of threads> -s(match format to number of matches)
     Possible implementations
     -p h(BMH) s(Serial BMHS) n(Exact Shift-And)
     -p m(Approximated Shift-And) p(Parallel BMHS) a(All)
     -n <number of threads> if (n<=0 or n>numProcessors) then n gets numProcessors
-    Examples: tp4 -i in.txt -o out.txt -d -p h -t br
-    tp4 -i in.txt -dd -o out.txt -t "hello world"
-    tp4 -i in.txt -d -p a -t hello
-    tp4 -i in.txt -d -p n -f patterns.txt
+    Examples: pattern-matching -i in.txt -o out.txt -d -p h -t br
+    pattern-matching -i in.txt -dd -o out.txt -t "hello world"
+    pattern-matching -i in.txt -d -p a -t hello
+    pattern-matching -i in.txt -d -p n -f patterns.txt
 
 As opções prováveis a serem mais utilizadas são o i, t, f e p
 Caso queira passar somente o arquivo de texto como parâmetro e o padrão ou o arquivo de padrão é possível, e isso fará com que a saída seja na saída padrão e a implementação a ser utilizada irá ser perguntada durante a execução.
