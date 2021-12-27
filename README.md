@@ -29,3 +29,5 @@ When using parallel BHMS it is necessary to specify the number of threads with t
 
 Pass the pattern file to the -f parameter or use -t to pass only a pattern.
 Use -d to see additional program information and -dd for even more information.
+
+Check the Portuguese written [documentation](./doc/doc.pdf) for more information.
