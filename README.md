@@ -1,15 +1,15 @@
-# Coloração de grafos
+# Graph Coloring
 
 ----
-## Gerar executáveis
+## Compile
 
     make
 
-## Remover
+## Clean
 
     make clean
 
-## Utilização do programa
+## Program
 
 	pattern-matching -i <entry file> -o <out file> -d(d) (DEBUG) -p <Implementations> -t <Pattern> -e <error [0..Integer]> -f <Pattern file> -n <number of threads> -s(match format to number of matches)
     Possible implementations
@@ -21,12 +21,12 @@
     pattern-matching -i in.txt -d -p a -t hello
     pattern-matching -i in.txt -d -p n -f patterns.txt
 
-As opções prováveis a serem mais utilizadas são o i, t, f e p
-Caso queira passar somente o arquivo de texto como parâmetro e o padrão ou o arquivo de padrão é possível, e isso fará com que a saída seja na saída padrão e a implementação a ser utilizada irá ser perguntada durante a execução.
-Para pular a pergunta de qual implementação a ser utilizado basta utilizar o parâmetro -p com alguma implementação (h,s,n,m,p) ou todas (a).
+The most likely options to be used are i, t, f and p.
+In case you only want to pass the text file as a parameter and the pattern or pattern file is possible, and this will cause the output to be on the standard output and the implementation to be used will be asked during execution.
+To skip the question of which implementation to use, just use the -p parameter with some implementation (h,s,n,m,p) or all (a).
 
-Quando usando o ShiftAnd aproximado também é necessário informar um erro pelo parâmetro -e caso não for informado por padrão o erro será 0
-Quando usando o BMHS Paralelo é necessário especificar o número de threads com o parâmetro -n ou então o número de threads por padrão será o máximo suportado pelo computador.
+when using the approximate shift and it is also necessary to inform an error by the parameter -e. If not informed, by default, the error will be 0.
+When using parallel BHMS it is necessary to specify the number of threads with the -n parameter or else the number of threads by default will be the maximum supported by the computer.
 
-Passe para o parâmetro -f o arquivo de padrões ou use -t para passar somente um padrão
-use -d para ver informações adicionais do programa e -dd para mais informações ainda
+Pass the pattern file to the -f parameter or use -t to pass only a pattern.
+Use -d to see additional program information and -dd for even more information.
