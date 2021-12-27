@@ -1,6 +1,5 @@
 # Graph Coloring
 
-----
 ## Compile
 
     make
